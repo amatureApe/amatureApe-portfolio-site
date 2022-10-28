@@ -1,6 +1,20 @@
+import { Container, Box, Heading } from '@chakra-ui/react'
+
 const Page = () => {
   return (
-    <div>Hello</div>
+    <Container>
+      <Box borderRadius="lg" bg="red" p={3} mb={6} align="center">
+        Hello, I&apos;m a full-stack developer based in Los Angeles!
+      </Box>
+      <Box display={{ md: 'flex' }}>
+        <Box flowGrow={1}>
+          <Heading as="h2" variant="page-title">
+            amatureApe
+          </Heading>
+          <p>Fullstack Web3 Developer and Designer</p>
+        </Box>
+      </Box>
+    </Container>
   )
 }
 
