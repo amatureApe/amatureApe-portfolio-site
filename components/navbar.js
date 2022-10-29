@@ -69,9 +69,9 @@ const Navbar = props => {
 
         </Stack>
         <Box flex={1} align="right">
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy id="navbar-menu">
-              <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
+          <Box ml={2} display={{ base: 'inline-block' }}>
+            <Menu>
+              <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="options" />
             </Menu>
           </Box>
         </Box>
