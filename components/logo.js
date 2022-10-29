@@ -10,21 +10,21 @@ const LogoBox = styled.span`
   align-items: center;
   height: 30px;
   line-height: 20px;
-  padding: 10px
-
-  &:hover img {
+  padding: 10px;
+  > svg {
+    transition: 200ms ease;
+  }
+  &:hover > svg {
     transform: rotate(20deg);
   }
 `
 
 const Logo = () => {
-  const footPrintImg = `/images/footprints${useColorModeValue('', '-dark')}.png`
+  const lazyApeImg = `/images/lazyape${useColorModeValue('-light', '-dark')}.png`
   return (
-    <Link href="/">
-      <a>
-        <LogoBox>
-          <Image src={footPrintImg} width={20} height={20} alt="logo" />
-        </LogoBox>
+    <Link href="/" scroll={false}>
+      <LogoBox>
+        <Image src={lazyApeImg} width={100} height={100} alt="logo" />
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontFamily='M PLUS Rounded 1c'
@@ -33,7 +33,7 @@ const Logo = () => {
         >
           amatureApe
         </Text>
-      </a>
+      </LogoBox>
     </Link>
   )
 }
