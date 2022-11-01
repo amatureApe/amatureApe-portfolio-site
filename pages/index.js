@@ -7,7 +7,7 @@ const Page = () => {
         Hello, I'm a full-stack developer based in Los Angeles!
       </Box>
       <Box display={{ md: 'flex' }}>
-        <Box flowGrow={1}>
+        <Box flowgrow={1}>
           <Heading as="h2" variant="page-title">
             amatureApe
           </Heading>
