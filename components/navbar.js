@@ -56,7 +56,6 @@ const Navbar = props => {
           display={{ base: 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
           alignItems="center"
-          justify
           flexgrow={1}
           mt={{ base: 4, nmd: 0 }}
         >
@@ -74,7 +73,19 @@ const Navbar = props => {
         <Box flex={1} align="right">
           <Box ml={2} display={{ base: 'inline-block' }}>
             <Menu>
-              <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="options" />
+              <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
+              <MenuList>
+                <NextLink href="/" passHref>
+                  <MenuItem as={Link}>About</MenuItem>
+                </NextLink>
+                <NextLink href="/works" passHref>
+                  <MenuItem as={Link}>Works</MenuItem>
+                </NextLink>
+                <NextLink href="/posts" passHref>
+                  <MenuItem as={Link}>Posts</MenuItem>
+                </NextLink>
+                <MenuItem as={Link} href="https://github.com/amatureApe/amatureApe-portfolio-site/">View Source</MenuItem>
+              </MenuList>
             </Menu>
           </Box>
         </Box>
