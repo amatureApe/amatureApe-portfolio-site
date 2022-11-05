@@ -1,5 +1,6 @@
 import { Container, Box, Heading, Image, useColorModeValue } from '@chakra-ui/react'
 import Section from '../components/section'
+import Paragraph from '../components/paragraph'
 
 const Page = () => {
   return (
@@ -36,7 +37,12 @@ const Page = () => {
         <Heading as="h3" variant="section-title">
           Work
         </Heading>
-        <p>Paragraph</p>
+        <Paragraph>
+          I'm a freelance full-stack web3 developer from the United States with a particular
+          passion for DeFi and all the opportunities that it unlocks for the world.
+          As a crypto native who was lucky enough to be able to turn my passions into able
+          career, I'm always eager to build.
+        </Paragraph>
       </Section>
     </Container>
   )
