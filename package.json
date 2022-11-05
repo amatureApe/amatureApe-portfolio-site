@@ -1,16 +1,16 @@
 {
-  "name": "chakra-craftzdog",
+  "name": "craftzdog-homepage",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Takuya's website",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
-    "prettier": "prettier -write .",
+    "start": "next start",
+    "prettier": "prettier --write .",
     "lint": "next lint"
   },
   "keywords": [],
-  "author": "",
+  "author": "Takuya Matsuyama",
   "license": "MIT",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.8",
@@ -25,8 +25,8 @@
     "three": "^0.143.0"
   },
   "devDependencies": {
-    "eslint": "^8.26.0",
-    "eslint-config-next": "^13.0.0",
+    "eslint": "^8.22.0",
+    "eslint-config-next": "^12.2.5",
     "prettier": "^2.7.1"
   }
 }
