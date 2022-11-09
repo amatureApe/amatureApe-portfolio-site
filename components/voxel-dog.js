@@ -12,7 +12,7 @@ const VoxelDog = () => {
     const refContainer = useRef()
     const [loading, setLoading] = useState(true)
     const refRenderer = useRef()
-    const urlDogGLB = (process.env.NODE_ENV === 'production' ? 'https://craftzdog.global.ssl.fastly.net/homepage' : '') + '/dog.glb'
+    const urlDogGLB = '/dog.glb'
 
     const handleWindowResize = useCallback(() => {
         const { current: renderer } = refRenderer
@@ -50,8 +50,6 @@ const VoxelDog = () => {
                 20 * Math.cos(0.2 * Math.PI)
             )
 
-            // 640 -> 240
-            // 8   -> 6
             const scale = scH * 0.005 + 4.8
             const camera = new THREE.OrthographicCamera(
                 -scale,
