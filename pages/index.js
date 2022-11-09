@@ -1,6 +1,9 @@
-import { Container, Box, Heading, Image, useColorModeValue } from '@chakra-ui/react'
+import NextLink from 'next/link'
+import { Container, Box, Heading, Image, useColorModeValue, Link, Button } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
+import { BioSection, BioYear } from '../components/bio'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const Page = () => {
   return (
@@ -42,6 +45,45 @@ const Page = () => {
           passion for DeFi and all the opportunities that it unlocks for the world.
           As a crypto native who was lucky enough to be able to turn my passions into able
           career, I'm always eager to build.
+        </Paragraph>
+        <Box align="center" my={4}>
+          <NextLink href="/works">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal" mx={2}>
+              My portfolio
+            </Button>
+          </NextLink>
+          <NextLink href="https://github.com/amatureApe">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal" mx={2}>
+              My github
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>1995</BioYear>
+          Born in Los Angeles, Califonia.
+        </BioSection>
+        <BioSection>
+          <BioYear>2018</BioYear>
+          Graduated with a degree in Political Science.
+        </BioSection>
+        <BioSection>
+          <BioYear>2020</BioYear>
+          Became a blockchain developer specializing in DeFi.
+        </BioSection>
+      </Section>
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          Hobbies
+        </Heading>
+        <Paragraph>
+          When I'm not coding, I like to spend my free time reading history
+          and philosophy, traveling, learning new langugaes, and weightlifting.
+          I also like playing videogames and gambling (responsibly).
         </Paragraph>
       </Section>
     </Container>
