@@ -1,10 +1,30 @@
 import NextLink from 'next/link'
-import { Container, Box, Heading, Image, useColorModeValue, Link, Button } from '@chakra-ui/react'
+import {
+  Container,
+  Box,
+  Heading,
+  Image,
+  useColorModeValue,
+  Link,
+  Button,
+  SimpleGrid,
+  List,
+  Icon,
+  ListItem,
+  Grid
+} from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
+import { GridItem } from '../components/grid-item'
+import {
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoLogoGithub,
+  IoLogoDiscord
+} from 'react-icons/io5'
 
 const Page = () => {
   return (
@@ -88,8 +108,30 @@ const Page = () => {
             I also like playing videogames and gambling (responsibly).
           </Paragraph>
         </Section>
+
+        <Section delay={0.3}>
+          <Heading as='h3' variant='section-title'>
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href='https://github.com/amatureApe' target='_blank'>
+                <Button variant='ghost' colorScheme='teal' leftIcon={<Icon as={IoLogoGithub} />} >
+                  @amatureApe
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href='https://twitter.com/amatureApe' target='_blank'>
+                <Button variant='ghost' colorScheme='teal' leftIcon={<Icon as={IoLogoTwitter} />} >
+                  @amatureApe
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+        </Section>
       </Container>
-    </Layout>
+    </Layout >
   )
 }
 
